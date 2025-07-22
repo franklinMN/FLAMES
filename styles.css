@@ -1,5 +1,209 @@
+:root {
+  --head-font-size: 2rem;
+  --head-width: 50px;
+  --head-height: 50px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", system-ui, sans-serif;
+
+  /* transition: none;
+  animation: none; */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #2e2e2e, #111111);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flames-container {
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  color: white;
+
+  /* from https://css.glass/ */
+  /* background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3); */
+  /* From https://css.glass */
+  background: rgba(4, 4, 4, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.3px);
+  -webkit-backdrop-filter: blur(9.3px);
+  border: 2px solid rgb(255, 255, 255);
+  position: relative;
+}
+
+.f-header {
+  /* border-left: 2px solid white;
+  border-right: 2px solid white; */
+  background: linear-gradient(#222222, #171717);
+
+  position: absolute;
+  top: calc((var(--head-width) / -2));
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  text-align: center;
+}
+
+.header-letter {
+  display: inline-block;
+  width: var(--head-width);
+  height: var(--head-height);
+  font-weight: bold;
+  font-size: var(--head-font-size);
+}
+
+.f-main {
+  /* background-color: aqua; */
+  width: 100%;
+  height: 100%;
+  margin-top: calc((var(--head-width) / 2));
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  color: white;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+  /* border-bottom: 1px solid white; */
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+}
+
+input:focus {
+  outline: none;
+  /* border-bottom: 1px solid white; */
+}
+
+input::placeholder {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+input:hover::placeholder {
+  opacity: 0.7;
+}
+input:focus::placeholder {
+  opacity: 0;
+}
+
+.submit-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+
+.submit-btn button {
+  margin: 15px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  transition: letter-spacing 0.1s linear;
+  /* background-color: aqua; */
+}
+
+.submit-btn button:hover {
+  letter-spacing: 0.25rem;
+}
+.submit-btn button:active {
+  transform: scale(0.9);
+  letter-spacing: -1px;
+}
+
+.result {
+  /* background-color: aquamarine; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* border-bottom: 1px solid white;
+  border-top: 1px solid white; */
+}
+
+/* 
+ hideing fmain, header, before showing result
+*/
+.result p {
+  font-family: "Anton", sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  text-align: center;
+}
+/* .retry {
+  display: block;
+} */
+.retry .svg-icon {
+  margin-top: 10px;
+  width: 48px !important;
+  height: 48px !important;
+  transition: transform 0.5s ease;
+  /* background-color: aqua;
+  border-radius: 50%; */
+}
+.retry .svg-icon:hover {
+  transform-origin: center;
+  transform: rotate(360deg);
+}
+
+.hide {
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+
+  visibility: visible;
+}
+.dance {
+  animation: danceing 1s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes danceing {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
 }

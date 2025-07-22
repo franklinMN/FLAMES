@@ -52,7 +52,16 @@
     <!-- <link rel="manifest" href="/manifest.json"> -->
 
     <!-- Fonts (Google Fonts example) -->
-    <link href="" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles.css" />
@@ -75,7 +84,60 @@
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <h1>Hello World</h1>
-    <!-- Your content goes here -->
+    <div class="flames-container">
+      <div id="f-result" class="result hide">
+        <p class="">Affection</p>
+        <div class="retry">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="retry-icon"
+            class="svg-icon"
+            style="
+              width: 1em;
+              height: 1em;
+              vertical-align: middle;
+              fill: currentColor;
+              overflow: hidden;
+            "
+            viewBox="0 0 1024 1024"
+            version="1.1"
+          >
+            <path
+              d="M921.6 585.728c0 226.304-184.32 409.6-409.6 409.6s-409.6-182.272-409.6-409.6c0-78.848 21.504-152.576 62.464-215.04l133.12 76.8c-25.6 39.936-39.936 87.04-39.936 138.24 0 142.336 114.688 254.976 254.976 254.976 142.336 0 257.024-114.688 257.024-254.976 0-118.784-79.872-219.136-189.44-247.808v131.072L196.608 248.832 577.536 28.672v151.552C772.096 214.016 921.6 381.952 921.6 585.728z"
+              fill="#BABABA"
+            />
+          </svg>
+        </div>
+      </div>
+      <div id="f-header" class="f-header visible">
+        <!-- 😎 -->
+        <span class="header-letter">F</span>
+        <span class="header-letter">❤️</span>
+        <span class="header-letter">🫣</span>
+        <span class="header-letter dance">💐</span>
+        <span class="header-letter">😑</span>
+        <span class="header-letter">🤗</span>
+      </div>
+      <div id="f-main" class="f-main visible">
+        <input
+          type="text"
+          name="person1"
+          id="person1"
+          placeholder="😀 your name . . ."
+          autocomplete="off"
+        />
+        <input
+          type="text"
+          name="person2"
+          id="person2"
+          placeholder="🤫 their name . . ."
+          autocomplete="off"
+        />
+        <div class="submit-btn">
+          <button id="submit" type="submit" value="submit">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>
