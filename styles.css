@@ -48,10 +48,10 @@ body {
 }
 
 .f-header {
-  /* border-left: 2px solid white;
-  border-right: 2px solid white; */
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  box-shadow: 0 0px 50px 10px rgba(0, 0, 0, 0.5);
   background: linear-gradient(#222222, #171717);
-
   position: absolute;
   top: calc((var(--head-width) / -2));
   left: 50%;
@@ -80,6 +80,7 @@ body {
   align-items: center;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
+  transition: opacity 2s ease;
 }
 
 input {
@@ -153,6 +154,7 @@ input:focus::placeholder {
 
   /* border-bottom: 1px solid white;
   border-top: 1px solid white; */
+  transition: opacity 2s ease;
 }
 
 /* 
@@ -181,11 +183,9 @@ input:focus::placeholder {
 }
 
 .hide {
-  /* display: none; */
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s ease;
 }
 
 .visible {

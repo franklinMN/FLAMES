@@ -37,14 +37,19 @@ async function getInputs() {
     const res = await response.json();
     console.log(res.result);
     document.querySelector("#f-result p").textContent = res.result;
-    f_result.classList.add("visible");
+
     f_result.classList.remove("hide");
     f_head.classList.add("hide");
-    f_head.classList.remove("visible");
     f_main.classList.add("hide");
-    f_main.classList.remove("visible");
+
+    requestAnimationFrame(() => {
+      f_result.classList.add("visible");
+      f_head.classList.remove("visible");
+      f_main.classList.remove("visible");
+    });
   } catch (error) {
     console.error("Error:", error);
+    alert("Failed to load data, refresh and try again!");
   }
 }
 
@@ -54,11 +59,14 @@ submit.addEventListener("click", getInputs);
 
 function refreshContainer() {
   f_result.classList.remove("visible");
-  f_result.classList.add("hide");
-  f_head.classList.remove("hide");
   f_head.classList.add("visible");
-  f_main.classList.remove("hide");
   f_main.classList.add("visible");
+
+  requestAnimationFrame(() => {
+    f_head.classList.remove("hide");
+    f_result.classList.add("hide");
+    f_main.classList.remove("hide");
+  });
   input1.value = "";
   input2.value = "";
 }
