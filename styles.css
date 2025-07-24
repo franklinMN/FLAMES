@@ -66,6 +66,15 @@ body {
   height: var(--head-height);
   font-weight: bold;
   font-size: var(--head-font-size);
+  cursor: default;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .f-main {
@@ -131,6 +140,7 @@ input:focus::placeholder {
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   transition: letter-spacing 0.1s linear;
+  cursor: pointer;
   /* background-color: aqua; */
 }
 

@@ -1,0 +1,23 @@
+
+social - social media share link below the container
+about  - an enclosed i icon to open about page
+       - about page inclues: 
+             * what is flames
+             * how its actually done
+             * maybe include manual work sample images
+             * Finally, a about author section
+             * author social links.
+
+submit btn - loading animation to submit button - three dots
+           - locking the submit button when loading
+
+retry svg - continue smooth rotation animation needed.
+          - on click boop animation like submit button
+
+
+header animation - change between letter and emoji.
+
+mobile view - adjust the width on mobile view
+            - full work needed on mobile landscape mode
+            - full work needed on mobile touch events
+
