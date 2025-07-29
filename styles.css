@@ -47,6 +47,23 @@ body {
   position: relative;
 }
 
+.about {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  color: rgba(255, 255, 255, 0.575);
+  transition: all 0.1s linear;
+}
+
+.about:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.about:active {
+  transform: scale(0.9, 0.9);
+}
+
 .f-header {
   border-left: 2px solid white;
   border-right: 2px solid white;
