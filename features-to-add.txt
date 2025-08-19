@@ -8,14 +8,16 @@ about  - an enclosed i icon to open about page
              * Finally, a about author section
              * author social links.
 
-submit btn - loading animation to submit button - three dots
-           - locking the submit button when loading
+[COMPLETED] submit btn - loading animation to submit button - three dots
+                       - locking the submit button when loading
 
-retry svg - continue smooth rotation animation needed.
-          - on click boop animation like submit button
+[COMPLETED] - retry svg - continue smooth rotation animation needed.
+                        - on click boop animation like submit button
 
 
-header animation - change between letter and emoji.
+[COMPLETED] - header animation - change between letter and emoji.
+
+color - add individual color for each result
 
 mobile view - adjust the width on mobile view
             - full work needed on mobile landscape mode

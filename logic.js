@@ -31,9 +31,9 @@ export function calculateFlames(firstPerson, secondPerson) {
   while (FLAMES.length > 1) {
     let pos = totalLength % FLAMES.length;
     if (pos === 0) {
-      FLAMES = ["F"];
+      FLAMES = FLAMES.splice(0, FLAMES.length - 1);
     } else if (pos === 1) {
-      FLAMES = ["S"];
+      FLAMES = FLAMES.splice(1, FLAMES.length);
     } else {
       // placing is reverse to rotating while iterating the flames
       FLAMES = FLAMES.splice(pos).concat(FLAMES.splice(0, pos - 1));
